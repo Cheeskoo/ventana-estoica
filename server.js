@@ -13,20 +13,20 @@ const server = http.createServer(async (req, res) => {
 
     if (req.url === '/api/quote'){
         try{ 
-        const route = path.join(__dirname, 'package.json')
+        const route = path.join(__dirname, 'quotes.json')
         const data = await fs.readFile(route)
         const quotes = JSON.parse(data)
         
         const randomIndex = Math.floor(Math.random() * quotes.length)
         const randomQuote = quotes[randomIndex]
         
-        sendResponse(res, 201, 'application/json', randomQuote)
+        sendResponse(res, 200, 'application/json', JSON.stringify(randomQuote))
 
         }catch(error){
-            console.log(`error al leer las frases : ${error}`)
-            sendResponse(res, 500, 'application/json', {
+            console.error(`error al leer las frases : ${error}`)
+            sendResponse(res, 500, 'application/json', JSON.stringify({
                 "message": "Error servidor 500"
-            })
+            }))
 
         }
 

@@ -12,20 +12,21 @@ export async function serveStatic(req, res, basedir){
     const contentType = getContentType(ext)
     try{
         const data = await fs.readFile(filePath)
-        sendResponse(res, 200, contentType, data)
+        const parsedData = ext === '.json' ? JSON.parse(data) : data
+        sendResponse(res, 200, contentType, ext === '.json' ? JSON.stringify(parsedData) : parsedData)
     }catch(error){
 
         if (error.code === 'ENOENT'){ 
-            console.log(`error: ${error}`)
-            sendResponse(res, 404, 'application/json', {
+            sendResponse(res, 404, 'application/json', JSON.stringify({
                 "message": "404 Not Found"
-        })
+            }))
         }else{
-            sendResponse(res, 500, 'application/json', {
-            "message": "500 Server failed"
-        })
-                                    }
+            console.error(error)
+            sendResponse(res, 500, 'application/json', JSON.stringify({
+                "message": "500 Server failed"
+            }))
+        }
 
-                }
+    }
     
 }
