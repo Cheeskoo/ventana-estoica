@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "author": "Marco Aurelio",
+    "text": "Todo lo que escuchamos es una opinión, no un hecho. Todo lo que vemos es una perspectiva, no la verdad."
+  },
+  {
+    "id": 2,
+    "author": "Marco Aurelio",
+    "text": "La mejor venganza es ser diferente a quien causó el daño."
+  },
+  {
+    "id": 3,
+    "author": "Marco Aurelio",
+    "text": "Tienes poder sobre tu mente, no sobre los eventos externos. Date cuenta de esto y encontrarás la fuerza."
+  },
+  {
+    "id": 4,
+    "author": "Séneca",
+    "text": "A menudo tenemos más miedo que dolor; y sufrimos más en la imaginación que en la realidad."
+  },
+  {
+    "id": 5,
+    "author": "Séneca",
+    "text": "La suerte es lo que sucede cuando la preparación se encuentra con la oportunidad."
+  },
+  {
+    "id": 6,
+    "author": "Séneca",
+    "text": "No es que tengamos poco tiempo, es que perdemos mucho."
+  },
+  {
+    "id": 7,
+    "author": "Platón",
+    "text": "La medida del hombre es lo que hace con el poder."
+  },
+  {
+    "id": 8,
+    "author": "Platón",
+    "text": "El que aprende y aprende y no practica es como el que ara y ara y nunca siembra."
+  },
+  {
+    "id": 9,
+    "author": "Platón",
+    "text": "La mayor victoria es vencerse a sí mismo."
+  }
+]

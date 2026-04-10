@@ -1,0 +1,12 @@
+{
+  "name": "ventana-estoica",
+  "version": "1.0.0",
+  "description": "Una api de frases estoicas",
+  "license": "ISC",
+  "author": "Franco Calderon",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js" 
+  }
+}
