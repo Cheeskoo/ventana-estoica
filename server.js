@@ -2,6 +2,7 @@ import http from 'node:http';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { sendResponse } from './utils/sendResponse.js'
+import { serveStatic } from './utils/serveStatic.js'
 
 const PORT = 3000;
 const __dirname = import.meta.dirname
@@ -26,11 +27,11 @@ const server = http.createServer(async (req, res) => {
             sendResponse(res, 500, 'application/json', {
                 "message": "Error servidor 500"
             })
-            
+
         }
 
-    }else if(!req.url.startsWith('/')){
-        return await serveStatic
+    }else if(!req.url.startsWith('/api')){
+        return await serveStatic(req, res, __dirname)
     }
 })
 
